@@ -65,6 +65,7 @@ class TypeOfMembership(models.Model):
 class Membership(models.Model):
     membership_Registration_Number = models.CharField(max_length=150)
     name = models.CharField(max_length=150)
+    phone_number = models.CharField(max_length=150, default='')
     email = models.EmailField()
     entry_types = models.ForeignKey(TypeOfMembership, related_name='membersentry', on_delete=models.CASCADE)
 
